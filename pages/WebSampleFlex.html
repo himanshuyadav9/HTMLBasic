@@ -1,0 +1,84 @@
+<!doctype html>
+<title>FlexBox</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .outer-col-1 {
+    background: grey;
+    flex: 1;
+  }
+  .outer-col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .inner-row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+    background:lightpink;
+  }
+  .inner-col {
+    flex: 4;
+  }
+  .inner-row article {
+    padding: 10px;
+    margin: 10px;
+    background: lightpink;
+  }
+  .inner-row aside {
+    background: gold;
+    flex: 1;
+    border: 0px solid gold;
+  }
+  header, footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background: yellowgreen;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+</style>
+<body>
+  <nav class="outer-col-1">Navigatin bar</nav>
+  <div class="outer-col-2">
+  	<header>Header</header>
+    <div class="inner-row">
+      <div class="inner-col">
+        <h2>First Article</h2>
+        <p>The Flexible Box Module, usually referred to as flexbox, was designed as a 
+            one-dimensional layout model, and as a method that could offer space distribution
+            between items in an interface and powerful alignment capabilities. This article gives
+            an outline of the main features of flexbox, which we will be exploring in more detail in 
+            the rest of these guides.When we describe flexbox as being one dimensional we are 
+            describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column.
+            </p>
+    </article>
+    <article>
+        <h2>Second Article</h2>
+        <p>When working with flexbox you need to think in terms of two axes — the main axis and the 
+            cross axis. The main axis is defined by the flex-direction property, and the cross axis 
+            runs perpendicular to it. </p>
+    </article>
+    <article>
+        <h2>Third Article</h2>
+        <p>Another vital area of understanding is how flexbox makes no assumption about the writing 
+            mode of the document. In the past, CSS was heavily weighted towards horizontal and 
+            left-to-right writing modes. </p>
+    </article>
+  		<footer>Footer</footer>
+      </div>
+    	<aside>Aside</aside>
+    </div>
+  </div>
+</body>

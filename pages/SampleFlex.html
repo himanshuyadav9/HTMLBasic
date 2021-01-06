@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Codepen-Demo Flexbox 3</title> 
+        <style>
+              body {padding: 2em;}
+
+              .headerContainer{
+                  display: flex;
+                  flex-flow: column wrap;
+                  align-content: center;
+                  background: tomato;
+                  font-weight: bold;
+                  padding: 10px;
+              }
+              .footerContainer{
+                  display: flex;
+                  flex-flow: column wrap;
+                  align-content: center;
+                  background: lightgreen;
+                  font-weight: bold;
+                  padding: 10px;
+              }
+              .mainContainer{
+                  display: flex;
+                  flex-flow: row wrap;
+                  font-weight: bold;
+                  text-align: center;
+              }
+              .mainContentItem{
+                text-align: left;
+                background: deepskyblue;
+              }
+              .article{
+                  padding: 10px;
+                  margin: 10px;
+                  background: aqua;
+              }
+             
+              .SidebarLeftItem{background: gold;}
+              .SidebarRightItem{background: hotpink;}
+
+              .SidebarItem{flex: 1 0 0; border: 0px solid green;}
+              .mainContentItem {flex: 3 0px;}
+              .SidebarLeftItem{order: 1;}
+              .mainContentItem{order: 2;}
+              .SidebarRightItem{order: 3;}
+              
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First Article</h2>
+                    <p>The Flexible Box Module, usually referred to as flexbox, was designed as a 
+                        one-dimensional layout model, and as a method that could offer space distribution
+                        between items in an interface and powerful alignment capabilities. This article gives
+                        an outline of the main features of flexbox, which we will be exploring in more detail in 
+                        the rest of these guides.When we describe flexbox as being one dimensional we are 
+                        describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column.
+                        </p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p>When working with flexbox you need to think in terms of two axes — the main axis and the 
+                        cross axis. The main axis is defined by the flex-direction property, and the cross axis 
+                        runs perpendicular to it. </p>
+                </article>
+                <article>
+                    <h2>Third Article</h2>
+                    <p>Another vital area of understanding is how flexbox makes no assumption about the writing 
+                        mode of the document. In the past, CSS was heavily weighted towards horizontal and 
+                        left-to-right writing modes. </p>
+                </article>
+            </section>
+            <sideBar class="SidebarItem SidebarLeftItem"><div class="center"><p>Left Side bar</p></div></sideBar>
+            <sideBar class="SidebarItem SidebarRightItem"><div class="center"><p>Right Side bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer"></footer>
+    </body>
+</html>
